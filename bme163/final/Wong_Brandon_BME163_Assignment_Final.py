@@ -128,7 +128,7 @@ def sortReads(reads,sortBy):
     if sortBy == "start":
         reads.sort(key=lambda x: x[1])
     elif sortBy == "end":
-        reads.sort(key=lambda x: x[2])
+        reads.sort(key=lambda x: (x[2], x[1]))
     return reads
 
 def stackReads(reads):
